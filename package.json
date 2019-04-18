@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-ts --config=./jasmine.json"
   },
   "keywords": [
     "avatars",
@@ -27,6 +27,10 @@
   "homepage": "https://github.com/rylnd/avatars-utils#readme",
   "dependencies": {},
   "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "jasmine": "^3.4.0",
+    "jasmine-ts": "^0.3.0",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.3"
   }
 }
