@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/rylnd/avatars-utils/issues"
   },
-  "homepage": "https://github.com/rylnd/avatars-utils#readme"
+  "homepage": "https://github.com/rylnd/avatars-utils#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  }
 }
