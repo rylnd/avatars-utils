@@ -2,8 +2,12 @@
   "name": "avatars-utils",
   "version": "0.0.1",
   "description": "Utilities for the Adorable Avatars service",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
