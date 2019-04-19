@@ -1,11 +1,11 @@
-import { sum } from '../math';
+import { sumHash } from './hashing';
 
 export class Hash<T> {
   public length: number;
   public values: T[];
-  public hashFn: (array: number[]) => number;
+  public hashFn: (key: string) => number;
 
-  constructor(values: T[] = [], hashFn = sum) {
+  constructor(values: T[] = [], hashFn = sumHash) {
     this.values = values;
     this.length = values.length;
     this.hashFn = hashFn;
@@ -22,13 +22,7 @@ export class Hash<T> {
   }
 
   private indexFor(key: string): number {
-    const charArray = key.split('');
-    const intArray = charArray.map(this.getCharInt);
-    const index = (this.hashFn(intArray) + intArray.length) % this.length;
+    const index = this.hashFn(key) % this.length;
     return Math.abs(index);
-  }
-
-  private getCharInt(char: string) {
-    return Number(char.charCodeAt(0)) || 0;
   }
 }
