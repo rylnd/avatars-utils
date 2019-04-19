@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "test": "TS_NODE_FILES=true jasmine-ts --config=./jasmine.json",
-    "prePublishOnly": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "avatars",
