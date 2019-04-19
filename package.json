@@ -1,15 +1,16 @@
 {
   "name": "avatars-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for the Adorable Avatars service",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc",
     "test": "TS_NODE_FILES=true jasmine-ts --config=./jasmine.json",
-    "prePublishOnly": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "avatars",
