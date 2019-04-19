@@ -1,4 +1,7 @@
 import { sum } from '../math';
+import { ReducerFn } from '../math/reducers';
+
+export type HashFn = (key: string) => number;
 
 const getCharInt = (char: string): number => Number(char.charCodeAt(0)) || 0;
 

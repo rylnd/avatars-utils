@@ -1,4 +1,4 @@
-import { sumHash } from './hashing';
+import { sumHash, HashFn } from './hashing';
 
 export class Hash<T> {
   public length: number;
