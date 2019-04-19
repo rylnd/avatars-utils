@@ -1,2 +1,2 @@
-export { hashFactory, sumHash } from './hashing';
+export { hashFactory, sumHash, HashFn } from './hashing';
 export { Hash } from './Hash';

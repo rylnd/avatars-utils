@@ -1,5 +1,4 @@
-import { sum } from '../math';
-import { ReducerFn } from '../math/reducers';
+import { sum, ReducerFn } from '../math';
 
 export type HashFn = (key: string) => number;
 
