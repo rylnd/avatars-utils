@@ -1,3 +1,3 @@
-export { product, sum, sumAndDiff } from './math';
+export { product, sum, sumAndDiff, ReducerFn } from './math';
 export { filePaths, fileNames } from './fs';
-export { Hash, sumHash } from './Hash';
+export { Hash, HashFn, hashFactory, sumHash } from './Hash';

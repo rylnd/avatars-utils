@@ -1,1 +1,1 @@
-export { product, sum, sumAndDiff } from './reducers';
+export { product, sum, sumAndDiff, ReducerFn } from './reducers';
