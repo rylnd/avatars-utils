@@ -2,9 +2,14 @@
   "name": "avatars-utils",
   "version": "0.0.1",
   "description": "Utilities for the Adorable Avatars service",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "TS_NODE_FILES=true jasmine-ts --config=./jasmine.json",
+    "prePublishOnly": "npm run build"
   },
   "keywords": [
     "avatars",
@@ -20,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/rylnd/avatars-utils/issues"
   },
-  "homepage": "https://github.com/rylnd/avatars-utils#readme"
+  "homepage": "https://github.com/rylnd/avatars-utils#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/node": "^11.13.5",
+    "jasmine": "^3.4.0",
+    "jasmine-ts": "^0.3.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.3"
+  }
 }
