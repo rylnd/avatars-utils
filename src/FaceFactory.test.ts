@@ -1,21 +1,57 @@
 import { FaceFactory } from "./FaceFactory";
 
 describe("FaceFactory", () => {
-  it("creates the expected face from singular parts", () => {
-    const factory = new FaceFactory(
-      ["onlyColor"],
-      ["onlyEyes"],
-      ["onlyNose"],
-      ["onlyMouth"]
-    );
-    const face = factory.create("");
-    const expected = {
-      color: "onlyColor",
-      eyes: "onlyEyes",
-      nose: "onlyNose",
-      mouth: "onlyMouth"
-    }
-    expect(face).toEqual(expected);
+  describe("given generic parts", () => {
+    it("creates the expected face from string parts", () => {
+      const factory = new FaceFactory(
+        ["onlyColor"],
+        ["onlyEyes"],
+        ["onlyNose"],
+        ["onlyMouth"]
+      );
+      const face = factory.create("");
+      const expected = {
+        color: "onlyColor",
+        eyes: "onlyEyes",
+        nose: "onlyNose",
+        mouth: "onlyMouth"
+      }
+      expect(face).toEqual(expected);
+    });
+
+    it("creates the expected face from numeric parts", () => {
+      const factory = new FaceFactory(
+        [1],
+        [2],
+        [3],
+        [4]
+      );
+      const face = factory.create("");
+      const expected = {
+        color: 1,
+        eyes: 2,
+        nose: 3,
+        mouth: 4
+      }
+      expect(face).toEqual(expected);
+    });
+
+    it("creates the expected face from object parts", () => {
+      const factory = new FaceFactory(
+        [{"a": 1}],
+        [{"b": 2}],
+        [{"c": 3}],
+        [{"d": 4}]
+      );
+      const face = factory.create("");
+      const expected = {
+        color: {"a": 1},
+        eyes: {"b": 2},
+        nose: {"c": 3},
+        mouth: {"d": 4}
+      }
+      expect(face).toEqual(expected);
+    });
   });
 
   describe("given a choice of parts", () => {
